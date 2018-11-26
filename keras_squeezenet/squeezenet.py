@@ -1,4 +1,4 @@
-from keras.applications.imagenet_utils import _obtain_input_shape
+from keras.applications.imagenet_utils import imagenet_utils
 from keras import backend as K
 from keras.layers import Input, Convolution2D, MaxPooling2D, Activation, concatenate, Dropout, warnings
 from keras.layers import GlobalAveragePooling2D, GlobalMaxPooling2D
@@ -58,7 +58,7 @@ def SqueezeNet(include_top=True, weights='imagenet',
                          ' as true, `classes` should be 1000')
 
 
-    input_shape = _obtain_input_shape(input_shape,
+    input_shape = imagenet_utils._obtain_input_shape(input_shape,
                                       default_size=227,
                                       min_size=48,
                                       data_format=K.image_data_format(),
