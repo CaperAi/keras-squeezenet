@@ -13,6 +13,6 @@ setup(name='keras_squeezenet',
                         'scipy>=0.14',
                         'h5py',
                         'tensorflow',
-                        'keras',
+                        'keras==2.2.4',
                         'six>=1.9.0',
                         'pyyaml'])
